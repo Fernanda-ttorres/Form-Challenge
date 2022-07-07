@@ -1,6 +1,7 @@
 import React from 'react'
+import { DivButton } from './Button.styled'
 
-const Button = (nameDiv, id, type, image, text, imageTwo) => {
+const Button = ({nameDiv, id, type, image, text, imageTwo}) => {
   return (
     <DivButton className={nameDiv}>
         <button className={id} id={id} type={type}>
