@@ -5,8 +5,6 @@ export const CheckStyled = styled.div`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    
-    height: 1.75rem;
   }
 
   input {
@@ -18,12 +16,15 @@ export const CheckStyled = styled.div`
     padding-left: 0.2rem;
     font-weight: 400;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
   }
 
   .error {
-   margin: 0;
-   margin-left: 1.625rem;
-   color: #ff0000;
-   font-size: 0.875rem;
+    margin: 0;
+    margin-top: 0.2rem;
+    margin-left: 1.625rem;
+    color: #ff0000;
+    font-size: 0.875rem;
   }
 `;
