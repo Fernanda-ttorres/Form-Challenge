@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InputStyled = styled.input`
+export const InputTagStyled = styled.input`
     width: 100%;
     height: 2.12rem;
     border: none;

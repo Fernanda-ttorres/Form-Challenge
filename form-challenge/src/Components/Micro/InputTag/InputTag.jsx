@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputTagStyled } from './Input.styled';
+import { InputTagStyled } from './InputTag.styled';
 
 export const Input = ({id, type, placeholder, register}) => {
     return (
