@@ -18,6 +18,7 @@ export const NavStyled = styled.div`
   .true {
     color: #074ee8;
     border-bottom: 3px solid #074ee8;
+    padding-bottom: 0.688rem; 
   }
 
   .false {
