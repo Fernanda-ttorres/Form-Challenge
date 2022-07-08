@@ -1,8 +1,10 @@
 import React from 'react';
-import { InputTagStyled } from './InputTag.styled';
+import  {InputTagStyled}  from './InputTag.styled';
 
-export const Input = ({id, type, placeholder, register}) => {
+const InputTag = ({id, type, placeholder, register}) => {
     return (
     <InputTagStyled className={`${id}`}  id={id} type={type} placeholder={placeholder} {...register(id)} />
     );
 };
+
+export default InputTag;
