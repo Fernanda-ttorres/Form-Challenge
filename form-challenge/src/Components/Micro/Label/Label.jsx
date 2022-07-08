@@ -1,8 +1,8 @@
 import React from 'react';
 import {LabelStyled} from './Label.styled';
 
-export const Label = ({label}) => {
+export const Label = ({label, id}) => {
     return (
-     <LabelStyled>{label}</LabelStyled>
+     <LabelStyled className={id}> {label}</LabelStyled>
     );
 };
