@@ -7,11 +7,15 @@ export const AuthContext = React.createContext();
 
 function App() {
  
-  let [isLogged, setIsLogged] = useState(false);
+  let [page, setPage] = useState(false);
 
-  function permission() {
-    setIsLogged((isLogged = true));
-    console.log("a")
+  function permission(x) {
+    setPage((page = x));
+    console.log(x)
+  }
+
+  function returnValue(){
+    return page
   }
 
 

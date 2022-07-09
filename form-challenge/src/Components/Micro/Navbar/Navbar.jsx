@@ -4,13 +4,9 @@ import { NavStyled } from "./Navbar.styled";
 import { AuthContext } from "../../../App";
 
 export const Navbar = () => {
-  
-
   const [a, SetA] = useState(false);
   const [b, SetB] = useState(true);
   const [c, SetC] = useState(true);
-
-  
 
   function setTab(x, y, z) {
     SetA(x);
@@ -18,14 +14,29 @@ export const Navbar = () => {
     SetC(z);
   }
 
+  const tabValue = 3;
 
-  function handleClick(value){
-    if(value == "basic") {
-      setTab(false, true, true);
-    } else if (value == "social") {
-      setTab(true, false, true);
-    } else if ( value == "certificates") {
-      setTab(true, true, false);
+  function handleClick(value) {
+    switch (tabValue) {
+      case 1:
+        setTab(false, true, true);
+        break;
+      case 2:
+        if (value == "basic") {
+          setTab(false, true, true);
+        } else if (value == "social") {
+          setTab(true, false, true);
+        }
+        break;
+      case 3:
+        if (value == "basic") {
+          setTab(false, true, true);
+        } else if (value == "social") {
+          setTab(true, false, true);
+        } else if (value == "certificates") {
+          setTab(true, true, false);
+        }
+        break;
     }
   }
 
@@ -33,13 +44,16 @@ export const Navbar = () => {
     return x ? "false" : "true";
   };
 
-  
   const setContext = useContext(AuthContext);
 
   return (
     <NavStyled>
-      <button className="one" onClick={() => setContext()}>|</button>
-      <button className="two" onClick={() => setContext()}>||</button>
+      <button className="one" onClick={() => setContext(2)}>
+        |
+      </button>
+      <button className="two" onClick={() => setContext(3)}>
+        ||
+      </button>
 
       <div className="navbar-div">
         <nav className="nav">
