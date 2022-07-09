@@ -14,10 +14,11 @@ export const Navbar = () => {
     SetC(z);
   }
 
-  const tabValue = 3;
+  const { name } = React.useContext(AuthContext);
+  const [page, setPage] = name;
 
   function handleClick(value) {
-    switch (tabValue) {
+    switch (page) {
       case 1:
         setTab(false, true, true);
         break;
@@ -44,14 +45,15 @@ export const Navbar = () => {
     return x ? "false" : "true";
   };
 
-  const setContext = useContext(AuthContext);
+ 
+
 
   return (
     <NavStyled>
-      <button className="one" onClick={() => setContext(2)}>
+      <button className="one" onClick={() => setPage(2)}>
         |
       </button>
-      <button className="two" onClick={() => setContext(3)}>
+      <button className="two" onClick={() => setPage(3)}>
         ||
       </button>
 
