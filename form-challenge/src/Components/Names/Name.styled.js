@@ -5,5 +5,6 @@ export const NamesDiv = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 32.2rem;
+    gap: 2.12rem;
 `;
