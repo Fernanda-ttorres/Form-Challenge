@@ -7,7 +7,7 @@ export const Input = ({id, label, type, placeholder, register}) => {
     return (
         <InputContainer >
             <Label id={id} label={label}/>
-            <InputTag className={`${id}`} id={id} type={type} placeholder={placeholder} rgister={register}/>
+            <InputTag className={`${id}`} id={id} type={type} placeholder={placeholder} register={register}/>
         </InputContainer>
     );
 };
