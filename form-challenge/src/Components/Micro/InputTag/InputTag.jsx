@@ -3,7 +3,7 @@ import  {InputTagStyled}  from './InputTag.styled';
 
 const InputTag = ({id, type, placeholder, register}) => {
     return (
-            <InputTagStyled className={`${id}`}  id={id} type={type} placeholder={placeholder} {...register(id)} />
+    <InputTagStyled className={`${id}`}  id={id} type={type} placeholder={placeholder} {...register(id)} />
     );
 };
 

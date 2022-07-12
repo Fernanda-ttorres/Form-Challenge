@@ -15,8 +15,8 @@ export const LabelStyled = styled.label`
         font-weight: 400;
         font-size: 1rem;
         line-height: 1.125rem;
-        color: #111111;     
-        
-        margin-left: 0.5rem;
+
+        color: #111111;        
+
     }
 `;
