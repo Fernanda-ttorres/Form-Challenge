@@ -10,15 +10,19 @@ export const NavStyled = styled.div`
   }
 
   p {
+    display: flex;
     cursor: pointer;
     margin: 0px;
-    padding: 0.813rem 4.136rem;
+    justify-content: center;
+    width: 171px;
+    padding-bottom: 0.8125rem;
+
   }
 
   .true {
     color: #074ee8;
     border-bottom: 3px solid #074ee8;
-    padding-bottom: 0.688rem; 
+    
   }
 
   .false {

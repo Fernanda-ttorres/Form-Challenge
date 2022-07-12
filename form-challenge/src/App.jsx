@@ -1,5 +1,6 @@
-import Navbar from "./Components/Micro/Navbar/Navbar";
+
 import React from "react";
+import { Card } from "./Components/Card/Card";
 import { useState } from "react";
 
 export const AuthContext = React.createContext();
@@ -10,9 +11,7 @@ function App() {
   
   return (
     <AuthContext.Provider value={{name: [page, setPage]}}>
-      
-        <Navbar />
-      
+          <Card/>
     </AuthContext.Provider>
   );
 }
