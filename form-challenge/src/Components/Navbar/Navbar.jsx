@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { NavStyled } from "./Navbar.styled";
 
-import { AuthContext } from "../../../App";
+import { AuthContext } from "../../App";
 
 export const Navbar = () => {
   const [a, SetA] = useState(false);
