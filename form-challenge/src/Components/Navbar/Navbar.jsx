@@ -16,6 +16,7 @@ export const Navbar = () => {
 
   const { name } = React.useContext(AuthContext);
   const [page, setPage] = name;
+  
 
   function handleClick(value) {
     switch (page) {
