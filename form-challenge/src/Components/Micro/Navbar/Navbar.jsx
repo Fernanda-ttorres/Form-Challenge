@@ -50,13 +50,6 @@ export const Navbar = () => {
 
   return (
     <NavStyled>
-      <button className="one" onClick={() => setPage(2)}>
-        |
-      </button>
-      <button className="two" onClick={() => setPage(3)}>
-        ||
-      </button>
-
       <div className="navbar-div">
         <nav className="nav">
           <p
