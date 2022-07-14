@@ -1,4 +1,4 @@
-import Navbar from "./Components/Navbar/Navbar"
+import Test from "./Components/testing/test";
 import React from "react";
 import { useState } from "react";
 
@@ -11,7 +11,7 @@ function App() {
   return (
     <AuthContext.Provider value={{name: [page, setPage]}}>
       
-        <Navbar />
+        <Test />
       
     </AuthContext.Provider>
   );
