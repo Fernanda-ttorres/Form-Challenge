@@ -7,6 +7,11 @@ export const CardStyled = styled.section`
     padding-left: 3rem;
     margin-top: 3.5rem;
     margin-bottom: 2.0625rem;
+
+    @media (max-width: 375px) {
+      font-size: 1rem;
+      padding-left: 1rem ;
+    }
   }
 
   display: flex;
@@ -17,4 +22,11 @@ export const CardStyled = styled.section`
   height: 46.188rem;
   margin: 6.06rem auto 0 auto;
   border-radius: 20px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;     
+  }
 `;
