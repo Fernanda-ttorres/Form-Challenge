@@ -1,15 +1,20 @@
 import Navbar from "../Navbar/Navbar";
-import { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AuthContext } from "../../App";
+
 
 import A from "./a";
 import B from "./b";
 import C from "./c";
 
 function Test() {
-
+    
 
     
-  const [page, setPage] = useState(0);
+    const { name } = React.useContext(AuthContext);
+    const [page, setPage] = name;
+    
+
   const Titles = ["page1", "page2", "page3"];
   const changePage = (x) => {
     setPage(x-1)
@@ -26,16 +31,15 @@ function Test() {
   }
 
 
-  
 
   return (
     <>
     <h1>{Titles[page]}</h1>
     <Navbar fun={changePage}/>
     <div>{PageDisplay()}</div>
-    <button onClick={() => changePage(1)}>FIRST</button>
-    <button onClick={() => changePage(2)}>SECOND</button>
-    <button onClick={() => changePage(3)}>THIRD</button>
+    <button onClick={() => changePage(1)}>BASIC</button>
+    <button onClick={() => changePage(2)}>SOCIAL</button>
+    <button onClick={() => changePage(3)}>CERTIFICATES</button>
 
     </>
   );

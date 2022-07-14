@@ -6,7 +6,7 @@ export const AuthContext = React.createContext();
 
 
 function App() {
-  let [page, setPage] = useState(false);
+  let [page, setPage] = useState(0);
   
   return (
     <AuthContext.Provider value={{name: [page, setPage]}}>

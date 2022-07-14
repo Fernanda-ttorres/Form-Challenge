@@ -4,86 +4,51 @@ import { NavStyled } from "./Navbar.styled";
 import { AuthContext } from "../../App";
 
 export const Navbar = (props) => {
-  
   const changePage = props.fun;
-  
-  
-  const [a, SetA] = useState(false);
-  const [b, SetB] = useState(true);
-  const [c, SetC] = useState(true);
-
-  function setTab(x, y, z, n) {
-    changePage(n)
-    SetA(x);
-    SetB(y);
-    SetC(z);
-  }
 
   const { name } = React.useContext(AuthContext);
-  const [page, setPage] = name;
-  setPage(3);
+  const [page] = name;
 
-  function handleClick(value) {
-    switch (page) {
-      case 1:
-        setTab(false, true, true, 1);
-        
-        break;
-      case 2:
-        if (value == "basic") {
-          setTab(false, true, true, 1);
-          
-        } else if (value == "social") {
-          setTab(true, false, true, 2);
-         
-        }
-        break;
-      case 3:
-        if (value == "basic") {
-          setTab(false, true, true, 1);
-          
-        } else if (value == "social") {
-          setTab(true, false, true, 2);
-          
-        } else if (value == "certificates") {
-          setTab(true, true, false, 3);
-          
-        }
-        break;
-    }
+  
+
+let a,b,c
+  
+  if(page == 0) {
+    a = "true"
+  } else if (page == 1) {
+    b = "true"
+  } else if (page == 2 ) {
+    c = "true"
   }
+  
 
-  const setName = (x) => {
-    return x ? "false" : "true";
-  };
-
- 
-
+  
 
   return (
-    <NavStyled>
+    <NavStyled >
       <div className="navbar-div">
-       
         <nav className="nav">
           <p
             name="basic"
-            className={setName(a)}
-            onClick={() => handleClick("basic")}
+            className={a}
+            onClick={() => changePage(1)}
+            
           >
             Basic
           </p>
           <p
-            name="basic"
-            className={setName(b)}
-            onClick={() => handleClick("social")}
+            name="social"
+            className={b}
+            onClick={() => changePage(2)}
+
           >
-            {" "}
+            
             Social
           </p>
           <p
-            name="basic"
-            className={setName(c)}
-            onClick={() => handleClick("certificates")}
+            name="certificate"
+            className={c}
+            onClick={() => changePage(3)}
           >
             Certificates
           </p>
