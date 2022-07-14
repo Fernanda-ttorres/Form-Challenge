@@ -16,30 +16,33 @@ function Test() {
     
 
   const Titles = ["page1", "page2", "page3"];
+
   const changePage = (x) => {
     setPage(x-1)
   }
 
+  let [lock, setLock] = useState(0)
+  
+
   const PageDisplay = () => {
     if (page === 0) {
-        return <A/>
+        return <A fun={setLock}/>
     } else if (page === 1) {
-        return <B/>
+        return <B fun={setLock} />
     } else if (page === 2) {
-        return <C/>
+        return <C />
     }
   }
+
 
 
 
   return (
     <>
     <h1>{Titles[page]}</h1>
-    <Navbar fun={changePage}/>
+    <Navbar fun={changePage} lock={lock}/>
     <div>{PageDisplay()}</div>
-    <button onClick={() => changePage(1)}>BASIC</button>
-    <button onClick={() => changePage(2)}>SOCIAL</button>
-    <button onClick={() => changePage(3)}>CERTIFICATES</button>
+ 
 
     </>
   );
