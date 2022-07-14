@@ -12,14 +12,15 @@ export const SocialForm = styled.form`
   @media (max-width: 768px) {
     width: 90vw;
     height: 80vh;
+    gap: 2.5rem;
   }
 `;
 
 export const DivBtn = styled.div`
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 1rem;
 `;
