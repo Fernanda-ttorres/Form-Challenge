@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderContainer = styled.div`
     width: 100vw;
     height: 18.7vh;
-    background: #ECEEF2;
+    background: #E5E5E5;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

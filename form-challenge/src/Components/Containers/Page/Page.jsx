@@ -15,13 +15,14 @@ export const AuthContext = React.createContext();
 
 export const Page = () => {
   let [page, setPage] = useState(0); //state that sets witch page we are
+  
+  let [lock, setLock] = useState(0) //state that sets the lock on the navbar. only unlockd after submit   
 
   const Titles = ["First Tab", "Second Tab", "Third Tab"]; //title for each page, using the page state as index
-
   const PageDisplay = () => {
-    //returns a diferent form based on the page state
+    //returns a diferent internal content based on the page state
     if (page === 0) {
-      return <A />;
+      return <A unLock={setLock}/>;
     } else if (page === 1) {
       return <B />;
     } else if (page === 2) {
@@ -29,11 +30,12 @@ export const Page = () => {
     }
   };
 
+
   return (
     <AuthContext.Provider value={{ name: [page, setPage] }}>
       <PageStyled>
         <Header tab={Titles[page]} />
-        <Card nav={<Navbar />} form={PageDisplay()} />
+        <Card nav={<Navbar lock={lock}/>} form={PageDisplay()} />
       </PageStyled>
     </AuthContext.Provider>
   );

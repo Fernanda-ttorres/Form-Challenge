@@ -4,11 +4,12 @@ import React, { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../Containers/Page/Page";
 
 import { NavStyled } from "./Navbar.styled";
-export const Navbar = () => {
+export const Navbar = ({lock}) => {
 
   const { name } = React.useContext(AuthContext); //page authcontext
   const [page,setPage] = name; //page state
 
+  console.log(lock)
   let tabA,tabB,tabC
   
   if(page == 0) {
