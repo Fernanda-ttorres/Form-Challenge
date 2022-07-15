@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 const DivButton = styled.div`
+    button{
+        cursor: pointer;
+    }
     .finish{
         img{
             width: 13px;
