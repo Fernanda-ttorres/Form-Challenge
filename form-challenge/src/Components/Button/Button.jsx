@@ -4,7 +4,7 @@ import { AuthContext } from "../Containers/Page/Page";
 
 
 
-const Button = ({nameDiv, id, type, image, text, imageTwo , pageState }) => {
+const Button = ({nameDiv, id, type, image, text, imageTwo , pageState , unLockNav}) => {
 
   const { name } = React.useContext(AuthContext); //page authcontext
   const [page,setPage] = name; //page state
@@ -13,7 +13,7 @@ const Button = ({nameDiv, id, type, image, text, imageTwo , pageState }) => {
 
   const changePage = (pageState) => {
     setPage(pageState)
-    
+    unLockNav()
   }
 
 

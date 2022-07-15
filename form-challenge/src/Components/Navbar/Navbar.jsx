@@ -1,5 +1,6 @@
 
 import React, { useState, useContext, useEffect } from "react";
+import { set } from "react-hook-form";
 
 import { AuthContext } from "../Containers/Page/Page";
 
@@ -9,7 +10,7 @@ export const Navbar = ({lock}) => {
   const { name } = React.useContext(AuthContext); //page authcontext
   const [page,setPage] = name; //page state
 
-  console.log(lock)
+ 
   let tabA,tabB,tabC
   
   if(page == 0) {
@@ -20,8 +21,34 @@ export const Navbar = ({lock}) => {
     tabC = "true"
   }
 
+  console.log("lock:" + lock)
+  
   const handleClick = (x) => {
-    setPage(x)
+    switch(lock) {
+      case 0 : {
+        setPage(0);
+      } break;
+
+      case 1 : {
+        if(x == 0) {
+          setPage(0)
+        } else if (x == 1) {
+          setPage(1)
+        }
+      } break;
+
+      case 2 : {
+        if(x == 0) {
+          setPage(0)
+        } else if ( x == 1) {
+          setPage(1)
+        } else if ( x == 2) {
+          setPage(2)
+        }
+      }
+
+      
+    } 
   }
 
 

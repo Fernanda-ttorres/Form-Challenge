@@ -1,14 +1,20 @@
+import React from "react";
 import Button from "../Button/Button";
-  export const C = () => {
-    return (
-      <div className="form">
-        <img src="https://image.shutterstock.com/image-photo/labrador-three-colour-puppies-black-600w-1685673742.jpg" />
-        <div className="button-div">
-          <Button id="next" text={"Finish"}  pageState={0}/>
-        </div>
+
+export const C = ({unLock}) => {
+
+  const unLockNav = () => {
+    unLock(0)
+  }
+
+  return (
+    <div className="form">
+      <img src="https://image.shutterstock.com/image-photo/labrador-three-colour-puppies-black-600w-1685673742.jpg" />
+      <div className="button-div">
+        <Button id="next" text={"Next"} pageState={0} unLockNav={unLockNav}/>
       </div>
-    );
-  };
-  
-  export default C;
-  
+    </div>
+  );
+};
+
+export default C;

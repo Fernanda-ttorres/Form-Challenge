@@ -24,9 +24,9 @@ export const Page = () => {
     if (page === 0) {
       return <A unLock={setLock}/>;
     } else if (page === 1) {
-      return <B />;
+      return <B unLock={setLock}/>;
     } else if (page === 2) {
-      return <C />;
+      return <C unLock={setLock}/>;
     }
   };
 
