@@ -14,6 +14,7 @@ export const NavStyled = styled.div`
     width: 100%;
     justify-content: space-around;
     border-bottom: 2px solid #AAAAAA;
+    cursor: pointer;
 
     margin-bottom: 	2.1875rem;
   }
