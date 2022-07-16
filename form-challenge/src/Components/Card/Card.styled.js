@@ -13,7 +13,7 @@ export const CardStyled = styled.section`
       padding-left: 1rem ;
     }
   }
-
+  
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -23,6 +23,7 @@ export const CardStyled = styled.section`
   margin: 6.06rem auto 0 auto;
   border-radius: 20px;
 
+  
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;

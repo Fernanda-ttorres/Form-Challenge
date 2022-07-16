@@ -24,8 +24,6 @@ export const Navbar = ({lock}) => {
     Nav = "sucess"
   }
 
-  console.log("lock:" + lock)
-  
   const handleClick = (x) => {
     switch(lock) {
       case 0 : {
