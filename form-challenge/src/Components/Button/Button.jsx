@@ -4,22 +4,11 @@ import { AuthContext } from "../Containers/Page/Page";
 
 
 
-const Button = ({nameDiv, id, type, image, text, imageTwo , pageState , unLockNav}) => {
-
-  const { name } = React.useContext(AuthContext); //page authcontext
-  const [page,setPage] = name; //page state
-
-  
-
-  const changePage = (pageState) => {
-    setPage(pageState)
-    unLockNav()
-  }
-
+const Button = ({nameDiv, id, type, image, text, imageTwo, form}) => {
 
   return (
     <DivButton className={nameDiv}>
-        <button className={id} id={id} type={type}  onClick={() => changePage(pageState)}>
+        <button className={id} id={id} type={type} form={form}/*onClick={() => changePage(pageState)}*/>
             <img src={image}/> {text} <img src={imageTwo}/>
         </button>
     </DivButton>

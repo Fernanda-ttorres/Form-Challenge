@@ -18,7 +18,6 @@ export const Page = () => {
   let [page, setPage] = useState(0); //state that sets witch page we are
   
   let [lock, setLock] = useState(0) //state that sets the lock on the navbar. only unlockd after submit   
-
   const Titles = ["First Tab", "Second Tab", "Third Tab", "Sucess"]; //title for each page, using the page state as index
   
   const PageDisplay = () => {
