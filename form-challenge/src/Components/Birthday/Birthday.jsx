@@ -1,6 +1,9 @@
 import {React, useState} from 'react'
+import { Label } from '../Micro/Label/Label';
+import { BirthStyled } from './Birthday.styled';
+import {Input} from '../Input/Input'
 
-const Birthday = () => {
+const Birthday = ({register}) => {
     const [Value, setValue] = useState("");
     const [Year, setYear] = useState("");
 
@@ -14,28 +17,36 @@ const Birthday = () => {
     }
 
     return (
-        <div>
-            <label htmlFor="select-day">Day</label>
-            <select name="select-day" className="select-day" placeholder="01" id="select-day">
-                {arrayDay.map((rdm, i) => (
-                <option key={i} value={rdm}>{rdm}</option>
-                ))}
-            </select>
-            <label htmlFor="select-month">Month</label>
-            <select name="select-month" className="select-month" placeholder="01" id="select-month">
-                {arrayMonth.map((rdm, i) => (
-                <option key={i} value={rdm}>{rdm}</option>
-                ))}
-            </select>
-            <label htmlFor="select-year">Year</label>
+        <BirthStyled>
+            <div>
+                <Label style="form" label="Day"/>
+                <select name="select-day" className="select-day" placeholder="01" id="select-day">
+                    {arrayDay.map((rdm, i) => (
+                    <option key={i} value={rdm}>{rdm}</option>
+                    ))}
+                </select>
+            </div>
+            <div>
+                <Label style="form" label="Month" />
+                <select name="select-month" className="select-month" placeholder="01" id="select-month">
+                    {arrayMonth.map((rdm, i) => (
+                    <option key={i} value={rdm}>{rdm}</option>
+                    ))}
+                </select>
+            </div>
+            <div>
+            <Label style="form" label="Year"/>
             <select name="select-year" className="select-year" onChange={(e) =>setYear(2022 - e.target.selectedIndex)} onBlur={()=>setValue(Number(2022-Year))} id="select-year">
                 {arrayYear.map((rdm, i) => (
                 <option key={i} value={rdm}>{rdm}</option>
                 ))}
             </select>
-            <label htmlFor="age">Age</label>
-            <input value={Value} placeholder="18" disabled id="age"></input>
-        </div>
+            </div>
+            <div>
+                <Label style="form" label="Age"/>
+                <input value={Value} placeholder="18" disabled id="age" register={register}></input>
+            </div>
+        </BirthStyled>
     )
 }
 
