@@ -4,15 +4,16 @@ import { Title } from "../Micro/Title/Title";
 import { useState } from "react";
 
 const Card = ({ form, nav, page }) => {
-  let tab;
+  let tab,cardName
   if (page < 3) {
     tab = "h5";
   } else {
     tab = "sucess";
+    cardName = "sucess"
   }
 
   return (
-    <CardStyled>
+    <CardStyled className={cardName}>
       <Title tagName={tab} text={"Team Sign up"} />
       <div className="navbar-div">{nav}</div>
       <div>{form}</div>

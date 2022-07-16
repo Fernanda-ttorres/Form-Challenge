@@ -23,10 +23,14 @@ export const CardStyled = styled.section`
   margin: 6.06rem auto 0 auto;
   border-radius: 20px;
 
+  &.sucess{
+    height: 34.6875rem;
+  }
+
   
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     border-radius: 0;     
   }

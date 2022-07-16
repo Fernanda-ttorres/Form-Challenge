@@ -34,7 +34,6 @@ export const Page = () => {
     }
   };
 
-  console.log(page)
 
   return (
     <AuthContext.Provider value={{ name: [page, setPage] }}>
