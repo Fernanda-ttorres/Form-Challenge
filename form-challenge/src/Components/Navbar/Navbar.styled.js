@@ -4,6 +4,11 @@ export const NavStyled = styled.div`
   .navbar-div {
     width: 515px;
   }
+
+  .sucess {
+    display: none;
+  }
+
   .nav {
     display: flex;
     flex-direction: row;

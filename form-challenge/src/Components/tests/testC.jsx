@@ -11,7 +11,7 @@ export const C = ({unLock}) => {
     <div className="form">
       <img src="https://image.shutterstock.com/image-photo/labrador-three-colour-puppies-black-600w-1685673742.jpg" />
       <div className="button-div">
-        <Button id="next" text={"Next"} pageState={0} unLockNav={unLockNav}/>
+        <Button id="next" text={"Finish"} pageState={3} unLockNav={unLockNav}/>
       </div>
     </div>
   );

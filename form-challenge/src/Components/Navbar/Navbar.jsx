@@ -12,6 +12,7 @@ export const Navbar = ({lock}) => {
 
  
   let tabA,tabB,tabC
+  let Nav = "navbar-div"
   
   if(page == 0) {
     tabA = "true"
@@ -19,6 +20,8 @@ export const Navbar = ({lock}) => {
     tabB = "true"
   } else if (page == 2 ) {
     tabC = "true"
+  } else if ( page == 3) {
+    Nav = "sucess"
   }
 
   console.log("lock:" + lock)
@@ -54,7 +57,7 @@ export const Navbar = ({lock}) => {
 
   return (
     <NavStyled>
-      <div className="navbar-div">
+      <div className={Nav} >
         <nav className="nav">
          <div className="tab" id={tabA} onClick={() => handleClick(0)}><p>Basic</p></div>
          <div className="tab" id={tabB} onClick={() => handleClick(1)}><p>Social</p></div>

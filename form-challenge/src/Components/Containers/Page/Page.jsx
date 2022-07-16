@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-import { PageStyled } from "./PageStyled";
+import { PageStyled } from "./PageStyled.js";
 
 import Card from "../../Card/Card";
 import Header from "../Header/Header";
@@ -10,6 +10,7 @@ import Navbar from "../../Navbar/Navbar";
 import A from "../../tests/testA";
 import B from "../../tests/testB";
 import C from "../../tests/testC";
+import Sucess from "../../tests/sucess";
 
 export const AuthContext = React.createContext();
 
@@ -18,7 +19,7 @@ export const Page = () => {
   
   let [lock, setLock] = useState(0) //state that sets the lock on the navbar. only unlockd after submit   
 
-  const Titles = ["First Tab", "Second Tab", "Third Tab"]; //title for each page, using the page state as index
+  const Titles = ["First Tab", "Second Tab", "Third Tab", "Sucess"]; //title for each page, using the page state as index
   const PageDisplay = () => {
     //returns a diferent internal content based on the page state
     if (page === 0) {
@@ -27,6 +28,8 @@ export const Page = () => {
       return <B unLock={setLock}/>;
     } else if (page === 2) {
       return <C unLock={setLock}/>;
+    } else if (page === 3) {
+      return <Sucess unLock={setLock}/>
     }
   };
 
