@@ -33,12 +33,12 @@ const Certificate = () => {
 
   return (
     <div>
-      <Input type="text" id="certificate" label="Certificates" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onChange={(e) => setCertificado({ certificado: e.target.value })} register={register}/>
+      <Input type="text" errors={errors} id="certificate" label="Certificates" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onChange={(e) => setCertificado({ certificado: e.target.value })} register={register}/>
       <DivForAll>
         <DivSelect>
           <Button id={"length"+arrayCertificado.length} text="Certificates" type="" imageTwo={Vetor} onClick={lookOptions}/>
-            {arrayCertificado.map((rdm) => 
-              <DivGeral className={viewOptions}><DivOption>{rdm.certificado}</DivOption><DivButton><Button id="deletButton" text="... X"/></DivButton></DivGeral>
+            {arrayCertificado.map((rdm, i) => 
+              <DivGeral key={i} className={viewOptions}><DivOption>{rdm.certificado}</DivOption><DivButton><Button id="deletButton" text="... X"/></DivButton></DivGeral>
             )}
         </DivSelect>
         <Button id="more" image={Image} text="More" type="" imageTwo={ImageTwo} onClick={adding}/>
