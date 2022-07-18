@@ -1,6 +1,7 @@
 import React from "react";
 import { CertificatesForm, DivBtn } from "./Certificates.styled";
 import {Graduation} from "../../Graduation/Graduation"
+import Certificate from "../../Certificate/Certificate"
 import Button from '../../Button/Button';
 import Image from '../../../Assets/check.png';
 
@@ -28,6 +29,7 @@ const Certificates = ({unLock}) => {
     
     return (
         <CertificatesForm  onSubmit={handleSubmit(onSubmit)}>
+            <Certificate register={register} errors={errors} text="Please enter your Name"/>
             <Graduation register={register} errors={errors} text="Please enter your Name"/>
             <DivBtn>
                 <Button nameDiv="finish" id="finish" type="submit" text="Finish" image={Image} unLock={unLock}/>
