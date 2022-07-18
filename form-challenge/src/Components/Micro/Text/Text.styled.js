@@ -20,5 +20,16 @@ export const TextStyled = styled.p`
         line-height: 1.125rem;
         margin-block: 0;
     }
+
+    &.birthday {
+        font-family: 'Nunito', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.125rem;
+        color: #767676;
+        line-height: 1rem;
+        margin-block: 0;
+
+    }
    
 `;
