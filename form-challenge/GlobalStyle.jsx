@@ -10,5 +10,6 @@ body, html, #root{
 	height: 100%;
 	padding: 0;
 	margin: 0;
+    background: #ECEEF2;
 }
 `;

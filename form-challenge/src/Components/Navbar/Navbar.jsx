@@ -1,12 +1,12 @@
 import React, { useState, useContext, useEffect } from "react";
 import { set } from "react-hook-form";
 
-{/*import { AuthContext } from "../Containers/Page/Page";*/}
+import { AuthContext } from "../Containers/Page/Page";
 
 import { NavStyled } from "./Navbar.styled";
-export const Navbar = (/*{lock}*/) => {
+export const Navbar = ({lock}) => {
 
- {/* const { name } = React.useContext(AuthContext); //page authcontext
+const { name } = React.useContext(AuthContext); //page authcontext
   const [page,setPage] = name; //page state
 
  
@@ -49,16 +49,16 @@ export const Navbar = (/*{lock}*/) => {
 
       
     } 
-  } */}
+  } 
 
 
   return (
     <NavStyled>
       <div className={"navbar-div"} >
         <nav className="nav">
-         <div className="tab" /*id={tabA} onClick={() => handleClick(0)}*/><p>Basic</p></div>
-         <div className="tab"  /*id={tabA} onClick={() => handleClick(0)}*/><p>Social</p></div>
-         <div className="tab"  /*id={tabA} onClick={() => handleClick(0)}*/><p>Certificates</p></div>
+         <div className="tab" id={tabA} onClick={() => handleClick(0)}><p>Basic</p></div>
+         <div className="tab"  id={tabB} onClick={() => handleClick(0)}><p>Social</p></div>
+         <div className="tab"  id={tabC} onClick={() => handleClick(0)}><p>Certificates</p></div>
         </nav>
       </div>
     </NavStyled>

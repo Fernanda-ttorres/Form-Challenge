@@ -1,5 +1,6 @@
 import React from 'react'
 import { DivButton } from './Button.styled'
+import { AuthContext } from "../Containers/Page/Page";
 
 const Button = ({nameDiv, id, type, image, text, imageTwo, form, onClick}) => {
   return (
