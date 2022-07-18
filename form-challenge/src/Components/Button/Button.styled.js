@@ -4,6 +4,30 @@ const DivButton = styled.div`
     button{
         cursor: pointer;
     }
+    .deletButton{
+        background: none;
+        border: none;
+        color: white;
+        font-size: 11px;
+        padding: 0px;
+    }
+    .length0{
+        opacity: 0;
+    }
+    .length1, .length2,.length3, .length4,.length5{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 25px;
+        height: 2.5rem;
+        width: 187px;
+        background-color: #074EE8;
+        color: white;
+        font-size: 1rem;
+        border: none;
+        border-radius: 4px;
+        gap: 7px;
+    }
     .finish{
         img{
             width: 13px;
