@@ -6,9 +6,7 @@ import { PageStyled } from "./Page.styled";
 import Card from "../../Card/Card";
 import Header from "../Header/Header";
 import Navbar from "../../Navbar/Navbar";
-import Basic from "../../Forms/Basic/Basic";
-import Social from "../../Forms/Social/Social";
-import Sucess from "../../Forms/Sucess/Sucess";
+import Sucess from "../../Forms/Sucess/Sucess"
 
 export const AuthContext = React.createContext();
 
@@ -22,27 +20,22 @@ export const Page = () => {
   /*const PageDisplay = () => {
     //returns a diferent internal content based on the page state
     if (page === 0) {
-      return <Basic unLock={setLock} />;
-   } else if (page === 1) {
-      return <Social unLock={setLock}/>;
+      return <A unLock={setLock}/>;
+    } else if (page === 1) {
+      return <B unLock={setLock}/>;
     } else if (page === 2) {
-      return <C />;
+      return <C unLock={setLock}/>;
     } else if (page === 3) {
-      return <Sucess />
-    }
+      return <Sucess/>
     }
   }; */
-
-  const PageDisplay = () => {
-    return <Sucess/>
-  };
 
 
   return (
     <AuthContext.Provider value={{ name: [page, setPage] }}>
       <PageStyled>
         <Header tab={Titles[page]} />
-        <Card nav={<Navbar lock={lock}/>} form={PageDisplay()} page={page}/>
+        <Card nav={<Navbar lock={lock}/>} form={<Sucess/>} page={page}/>
       </PageStyled>
     </AuthContext.Provider>
   );
