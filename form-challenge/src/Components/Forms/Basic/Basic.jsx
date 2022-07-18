@@ -8,10 +8,10 @@ import Image from '../../../Assets/right-arrow.png';
 import Birthday from '../../Birthday/Birthday';
 import Text from "../../Micro/Text/Text";
 
-import { useForm } from "react-hook-form";
-import { yupResolver } from '@hookform/resolvers/yup';
-import { AuthContext } from "../../Containers/Page/Page";
-import { maskPhone } from "../../../Utils/MaskPhone";
+//import { useForm } from "react-hook-form";
+//import { yupResolver } from '@hookform/resolvers/yup';
+//import { AuthContext } from "../../Containers/Page/Page";
+//import { maskPhone } from "../../../Utils/MaskPhone";
 //import schema from "../../../Utils/Validations";
 
 const Basic = ({unLock}) => {

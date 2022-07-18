@@ -14,7 +14,7 @@ const Card = ({ form, nav, page }) => {
 
   return (
     <CardStyled>
-      <Title tagName={"h5"} text={"Team Sign up"}/>
+      <Title tagName={cardName} text={"Team Sign up"}/>
       <div className="navbar-div">{nav}</div>
       <div>{form}</div>
     </CardStyled>
