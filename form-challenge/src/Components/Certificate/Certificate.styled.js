@@ -19,7 +19,7 @@ export const DivOption = styled.div`
     display: flex;
     align-items: center;
     background: rgba(7, 78, 232, 0.7);
-    color: white;
+    color: #ECEEF2;
     font-size: 11px;
     height: 100%;
     position: relative;
