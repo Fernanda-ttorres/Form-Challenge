@@ -41,8 +41,8 @@ const Sucess = () => {
         <LocalText title={"Nickname: "} content={localStorage.getItem("nickname")}/>
         <LocalText title={"Email: "} content={localStorage.getItem("email")}/>
         <LocalText title={"Phone: "} content={localStorage.getItem("phone")}/>
-        <LocalText title={"Birthday: "} content={localStorage.getItem("selectday") + "/" 
-        + localStorage.getItem("selectmonth") + "/" + "1998"}/>
+        <LocalText title={"Birthday: "} content={localStorage.getItem("selectday").padStart(2,"0") + "/" 
+        + localStorage.getItem("selectmonth").padStart(2,"0") + "/" + "1998"}/>
         <LocalText title={"Linkedin: "} content={localStorage.getItem("linkedin")}/>
         <LocalText title={"Github: "} content={localStorage.getItem("github")}/>
         <LocalText title={"Certificates: "} content={localStorage.getItem("certificate")}/>
