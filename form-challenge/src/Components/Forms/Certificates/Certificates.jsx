@@ -35,7 +35,7 @@ const Certificates = ({unLock}) => {
     return (
         <CertificatesForm  onSubmit={handleSubmit(onSubmit)}>
             <Certificate register={register} errors={errors} text="Please enter your "/>
-            <Graduation register={register} errors={errors} text="Please enter your Team Name"/>
+            <Graduation register={register} errors={errors} />
             <DivBtn>
                 <Button nameDiv="finish" id="finish" type="submit" text="Finish" image={Image} unLock={unLock}/>
             </DivBtn>
