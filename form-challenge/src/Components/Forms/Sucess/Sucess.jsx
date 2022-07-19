@@ -3,6 +3,22 @@ import Button from "../../Button/Button";
 import Text from "../../Micro/Text/Text";
 import { LocalText } from "../../Local-Text/LocalText";
 const Sucess = () => {
+
+  localStorage.setItem("fullname","nome")
+  localStorage.setItem("nickname","nome")
+  localStorage.setItem("email","nome")
+  localStorage.setItem("phone","nome")
+  localStorage.setItem("selectday","nome")
+  localStorage.setItem("selectmonth","nome")
+  localStorage.setItem("github","nome")
+  localStorage.setItem("certificate","nome")
+  localStorage.setItem("team","nome")
+  localStorage.setItem("institution","nome")
+  localStorage.setItem("graduation","nome")
+
+
+
+     
   return (
     <SucessPage>
       <Text
@@ -11,16 +27,18 @@ const Sucess = () => {
       />
 
       <div className="local-content">
-        <LocalText title={"Full Name: "} content={"Fulano"}/>
-        <LocalText title={"Email: "} content={"qwewqe@wewqeq.ewqewq "}/>
-        <LocalText title={"Birthday: "} content={"14/04/2008 "}/>
-        <LocalText title={"Age: "} content={"13"}/>
-        <LocalText title={"Github: "} content={"dsadsadsa"}/>
-        <LocalText title={"Certificates: "} content={"https://cursos.alura.com.br/certificate/4ad81d87-33a3..."}/>
-        <LocalText title={"Team Name: "} content={"asdas "}/>
-        <LocalText title={"Institution: "} content={"asdsda"}/>
-        <LocalText title={"Graduation: "} content={"saas"}/>
-
+        <LocalText title={"Full Name:"} content={localStorage.getItem("fullname")}/>
+        <LocalText title={"Nickname: "} content={localStorage.getItem("nickname")}/>
+        <LocalText title={"Email: "} content={localStorage.getItem("email")}/>
+        <LocalText title={"Phone: "} content={localStorage.getItem("phone")}/>
+        <LocalText title={"Birthday: "} content={localStorage.getItem("selectday") + "/" 
+        + localStorage.getItem("selectmonth") + "/" + "1998"}/>
+        <LocalText title={"Linkedin: "} content={localStorage.getItem("linkedin")}/>
+        <LocalText title={"Github: "} content={localStorage.getItem("github")}/>
+        <LocalText title={"Certificates: "} content={localStorage.getItem("certificate")}/>
+        <LocalText title={"Team Name: "} content={localStorage.getItem("team")}/>
+        <LocalText title={"Institution: "} content={localStorage.getItem("institution")}/>
+        <LocalText title={"Graduation: "} content={localStorage.getItem("graduation")}/>
       </div>
 
       <DivBtn>
