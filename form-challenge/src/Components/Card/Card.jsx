@@ -1,7 +1,6 @@
-import React from "react";
-import { CardStyled } from "./Card.styled";
-import {Title} from "../Micro/Title/Title"
 import { useState } from "react";
+import {CardStyled} from './Card.styled'
+import {Title} from "../Micro/Title/Title"
 
 const Card = ({ form, nav, page }) => {
   let titleName = "h5"
@@ -20,4 +19,4 @@ const Card = ({ form, nav, page }) => {
   );
 };
 
-export default Card
+export default Card;
