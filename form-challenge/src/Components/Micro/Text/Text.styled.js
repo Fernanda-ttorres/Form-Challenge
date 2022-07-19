@@ -5,10 +5,14 @@ export const TextStyled = styled.p`
         font-family: 'Inter', sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 1.125rem;
+        font-size: 1rem;
         color: #111111;
         line-height: 1.5rem;
         margin-block: 0;
+
+        @media (max-width: 768px) {
+            font-size: 0.7rem;
+        }
     }
 
     &.sucess {
@@ -25,11 +29,11 @@ export const TextStyled = styled.p`
         font-family: 'Nunito', sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 1.125rem;
+        font-size: 1rem;
         color: #767676;
-        line-height: 1rem;
+        line-height: 0.5rem;
         margin-block: 0;
-
+        margin-bottom: 1rem;
     }
    
 `;

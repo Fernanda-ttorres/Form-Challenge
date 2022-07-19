@@ -2,7 +2,15 @@ import styled from "styled-components";
 
 export const NavStyled = styled.div`
   .navbar-div {
-    width: 515px;
+    width: 33rem;
+    @media (max-width: 768px) {
+      width: 85vw;
+    }
+
+    @media (max-width: 375px) {
+      width: 95vw;
+    }
+    
   }
   .sucess {
     display: none;
@@ -18,12 +26,16 @@ export const NavStyled = styled.div`
     justify-content: space-around;
     border-bottom: 2px solid #AAAAAA;
     cursor: pointer;
-    margin-bottom: 	2.1875rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: 375px) {
+      margin-bottom: 1rem;
+    }
   }
   #true {
     p {
-      margin-bottom: 0.0625px;
+      margin-bottom: 0;
     }
-    border-bottom: 3px solid #074EE8;
+    border-bottom: 2px solid #074EE8;
   }
 `;

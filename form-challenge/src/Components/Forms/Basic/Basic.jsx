@@ -33,11 +33,11 @@ const Basic = ({unLock}) => {
         <BasicForm  onSubmit={handleSubmit(onSubmit)}>
             <Names register={register} errors={errors} text="Please enter your Name"/>
             <Contact register={register} errors={errors} text="Please enter your Name" onChange={e => maskPhone(e)} /> 
+            <Text container="birthday" text="Birthday *"/>
+            <Birthday register={register} errors={errors} text="Please enter your Name"/> 
             <DivCheck>
                 <Checkbox id="checkbox" type="checkbox" label="I accept the terms and privacy" register={register} errors={errors} text="Please enter your Name"/>
             </DivCheck>
-            <Text container="birthday" text="Birthday *"/>
-            <Birthday register={register} errors={errors} text="Please enter your Name"/> 
             <DivBtn>
                 <Button nameDiv="next" id="next" type="submit"  text="Next" imageTwo={Image} unLock={unLock}/>
             </DivBtn>

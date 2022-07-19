@@ -48,6 +48,7 @@ const DivButton = styled.div`
     .next{
         img{
             width: 12px;
+            margin: 0;
         }
         display: flex;
         background-color: #074EE8;
