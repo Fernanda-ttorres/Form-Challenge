@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 export const NavStyled = styled.div`
   .navbar-div {
-    width: 33rem;
-    @media (max-width: 768px) {
-      width: 85vw;
-    }
+      width: 33rem;
+      @media (max-width: 768px) {
+        width: 85vw;
+      }
 
-    @media (max-width: 375px) {
-      width: 95vw;
-    }
-    
-  }
+      @media (max-width: 375px) {
+        width: 95vw;
+      }
+
+   }
   .sucess {
     display: none;
   }

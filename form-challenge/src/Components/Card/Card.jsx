@@ -7,6 +7,8 @@ const Card = ({ form, nav, page }) => {
   if(page === 3) {
     titleName = "sucess"
   }
+  
+  
 
   return (
     <CardStyled>

@@ -9,17 +9,19 @@ import Navbar from "../../Navbar/Navbar";
 import Basic from "../../Forms/Basic/Basic";
 import Social from "../../Forms/Social/Social";
 import Certificates from "../../Forms/Certificates/Certificates"
+import Sucess from "../../Forms/Sucess/Sucess"
 
 export const AuthContext = React.createContext();
 
 export const Page = () => {
-  let [page, setPage] = useState(2); //state that sets witch page we are
+  let [page, setPage] = useState(0); //state that sets witch page we are
   
   let [lock, setLock] = useState(0) //state that sets the lock on the navbar. only unlockd after submit   
 
   const Titles = ["First Tab", "Second Tab", "Third Tab", "Sucess"]; //title for each page, using the page state as index
   
-  const PageDisplay = () => {
+  
+ const PageDisplay = () => {
     //returns a diferent internal content based on the page state
     if (page === 0) {
       return <Basic unLock={setLock} />;
@@ -38,7 +40,7 @@ export const Page = () => {
     <AuthContext.Provider value={{ name: [page, setPage] }}>
       <PageStyled>
         <Header tab={Titles[page]} />
-        <Card nav={<Navbar lock={lock}/>} form={PageDisplay()} page={page}/>
+        <Card nav={<Navbar lock={lock}/>}  page={page}/>
       </PageStyled>
     </AuthContext.Provider>
   );
