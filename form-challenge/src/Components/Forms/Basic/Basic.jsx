@@ -12,7 +12,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { AuthContext } from "../../Containers/Page/Page";
 import { maskPhone } from "../../../Utils/MaskPhone";
-//import schema from "../../../Utils/Validations";
+import {schema} from "../../../Utils/Validations";
 
 const Basic = ({unLock}) => {
     
@@ -23,10 +23,8 @@ const Basic = ({unLock}) => {
     const { name } = React.useContext(AuthContext); //page authcontext
     const [page,setPage] = name; //page state
 
-    let pageState;
     const onSubmit = data => {
-    pageState=1;
-    setPage(pageState)
+    setPage(1)
     unLock(1)
     console.log(data);
     }
