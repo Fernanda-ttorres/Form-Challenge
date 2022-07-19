@@ -6,4 +6,10 @@ export const ErrorStyled = styled.p`
     line-height: 14px;
     margin: 0;
     max-width: 150px;
+
+    @media (max-width: 768px) {
+        &.error{
+            display: none;
+        }
+    }
 `;
