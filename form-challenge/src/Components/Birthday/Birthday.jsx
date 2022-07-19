@@ -21,7 +21,7 @@ const Birthday = ({register, errors, text}) => {
         <BirthStyled>
             <div>
                 <Label style="form" label="Day"/>
-                <select name="select-day" className="select-day" placeholder="01" id="select-day">
+                <select name="select-day" className="select-day" placeholder="01" id="selectday" {...register('selectday')}>
                     {arrayDay.map((rdm, i) => (
                     <option key={i} value={rdm}>{rdm}</option>
                     ))}

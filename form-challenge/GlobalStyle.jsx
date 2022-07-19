@@ -11,5 +11,9 @@ body, html, #root{
 	padding: 0;
 	margin: 0;
     background: #ECEEF2;
+
+    @media (max-width: 768px) {
+        background-color: #ffffff;
+  }
 }
 `;

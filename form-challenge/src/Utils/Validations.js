@@ -7,6 +7,7 @@ export const schema = yup.object({
     phone: yup.string(),
     checkbox: yup.boolean().isTrue(),
     selectmonth: yup.number().min(1).required(),
+    selectday: yup.number().min(1).required(),
 }).required();
 
 export const schemaTwo = yup.object({
