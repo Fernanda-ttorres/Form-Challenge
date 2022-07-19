@@ -23,10 +23,17 @@ const Basic = ({unLock}) => {
     const { name } = React.useContext(AuthContext); //page authcontext
     const [page,setPage] = name; //page state
 
+    const saveLocal = (value) => {
+        let localValues = Object.entries(value)
+        for(let i = 0; i < localValues.length; i++) {
+            localStorage.setItem(localValues[i][0],localValues[i][1])
+        }
+    }
+
     const onSubmit = data => {
     setPage(1)
     unLock(1)
-    console.log(data);
+    saveLocal(data)
     }
     
     return (

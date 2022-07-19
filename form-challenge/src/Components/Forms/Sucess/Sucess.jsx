@@ -37,7 +37,7 @@ const Sucess = () => {
       />
 
       <div className="local-content">
-        <LocalText title={"Full Name:"} content={localStorage.getItem("fullname")}/>
+        <LocalText title={"Full Name: "} content={localStorage.getItem("fullname")}/>
         <LocalText title={"Nickname: "} content={localStorage.getItem("nickname")}/>
         <LocalText title={"Email: "} content={localStorage.getItem("email")}/>
         <LocalText title={"Phone: "} content={localStorage.getItem("phone")}/>
