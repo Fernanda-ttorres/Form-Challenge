@@ -17,6 +17,7 @@ export const Page = () => {
 
   const Titles = ["First Tab", "Second Tab", "Third Tab", "Sucess"]; //title for each page, using the page state as index
   
+  
   /*const PageDisplay = () => {
     //returns a diferent internal content based on the page state
     if (page === 0) {
@@ -35,7 +36,7 @@ export const Page = () => {
     <AuthContext.Provider value={{ name: [page, setPage] }}>
       <PageStyled>
         <Header tab={Titles[page]} />
-        <Card nav={<Navbar lock={lock}/>} form={<Sucess/>} page={page}/>
+        <Card nav={<Navbar lock={lock}/>}  page={page}/>
       </PageStyled>
     </AuthContext.Provider>
   );

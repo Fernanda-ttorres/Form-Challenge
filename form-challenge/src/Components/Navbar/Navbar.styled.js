@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const NavStyled = styled.div`
   .navbar-div {
     width: 515px;
+   
   }
   .sucess {
     display: none;

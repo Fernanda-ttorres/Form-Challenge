@@ -1,10 +1,14 @@
 import { SucessPage, DivBtn } from "./Sucess.styled";
 import Button from "../../Button/Button";
+import React from "react";
 import Text from "../../Micro/Text/Text";
 import { LocalText } from "../../Local-Text/LocalText";
+import { AuthContext } from "../../Containers/Page/Page";
+import { useContext } from "react";
+import Image from "../../../Assets/check.png"
 const Sucess = () => {
 
-  localStorage.setItem("fullname","nome")
+  /*localStorage.setItem("fullname","nome")
   localStorage.setItem("nickname","nome")
   localStorage.setItem("email","nome")
   localStorage.setItem("phone","nome")
@@ -14,11 +18,17 @@ const Sucess = () => {
   localStorage.setItem("certificate","nome")
   localStorage.setItem("team","nome")
   localStorage.setItem("institution","nome")
-  localStorage.setItem("graduation","nome")
+  localStorage.setItem("graduation","nome")*/
 
+  
+  const { name } = React.useContext(AuthContext); //page authcontext
+  const [page,setPage] = name; //page state
 
+  const returnPage = () => {
+    setPage(0)
+  }
 
-     
+   
   return (
     <SucessPage>
       <Text
@@ -42,7 +52,7 @@ const Sucess = () => {
       </div>
 
       <DivBtn>
-        <Button nameDiv="finish" id="finish" text="Finish" />
+        <Button nameDiv="finish" id="finish" text="Finish" image={Image}  onClick={returnPage}/>
       </DivBtn>
     </SucessPage>
   );
