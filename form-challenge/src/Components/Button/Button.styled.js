@@ -31,6 +31,7 @@ const DivButton = styled.div`
     .finish{
         img{
             width: 13px;
+            margin: 0;
         }
         background-color: #074EE8;
         color: white;
@@ -67,6 +68,7 @@ const DivButton = styled.div`
     .more{
         img{
             width: 12px;
+            margin: 0;
         }
         display: flex;
         background-color: #074EE8;

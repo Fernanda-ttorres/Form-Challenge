@@ -29,10 +29,9 @@ export const Page = () => {
       return <Social unLock={setLock}/>;
     } else if (page === 2) {
       return <Certificates unLock={setLock}/>;
-    } /*else if (page === 3) {
+    } else if (page === 3) {
       return <Sucess />
     }
-    }*/
   };
 
 
@@ -40,7 +39,7 @@ export const Page = () => {
     <AuthContext.Provider value={{ name: [page, setPage] }}>
       <PageStyled>
         <Header tab={Titles[page]} />
-        <Card nav={<Navbar lock={lock}/>}  page={page}/>
+        <Card nav={<Navbar lock={lock}/>} form={PageDisplay()} page={page}/>
       </PageStyled>
     </AuthContext.Provider>
   );

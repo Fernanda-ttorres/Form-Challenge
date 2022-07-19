@@ -6,7 +6,7 @@ export const GraduationDiv = styled.div`
     justify-content: center;
     align-items: center;
     width: 32.2rem;
-    gap: 3.3rem; 
+    gap: 2rem; 
 
     @media (max-width: 768px) {
         width: 90%;

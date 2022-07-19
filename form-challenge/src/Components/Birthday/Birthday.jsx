@@ -1,7 +1,6 @@
 import {React, useState} from 'react'
 import { Label } from '../Micro/Label/Label';
 import { BirthStyled } from './Birthday.styled';
-import ErrorMessage from '../Micro/ErrorMessage/ErrorMessage';
 
 const Birthday = ({register, errors, text}) => {
     const [Value, setValue] = useState("");
@@ -20,7 +19,6 @@ const Birthday = ({register, errors, text}) => {
 
     return (
         <BirthStyled>
-            <ErrorMessage errors={errors} id="selectmonth" text={text}/>
             <div>
                 <Label style="form" label="Day"/>
                 <select name="select-day" className="select-day" placeholder="01" id="select-day">

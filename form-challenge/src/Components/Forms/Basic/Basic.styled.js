@@ -14,7 +14,7 @@ export const BasicForm = styled.form`
   }
 
   @media (max-width: 375px) {
-    height: 95vh;
+    height: 100%;
   }  
 
   p {
@@ -33,14 +33,14 @@ export const BasicForm = styled.form`
 export const DivBtn = styled.div`
   display: flex;
   width: 100%;
-  height: 10vh;
+  height: 7vh;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
 
   @media (max-width: 768px) {
-    height: 7vh;
-  }  
+    height: 5.5vh;
+  } 
 `;
 
 export const DivCheck = styled.div`
@@ -57,6 +57,6 @@ export const DivCheck = styled.div`
 
     @media (max-width: 375px) {
       width: 95%;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
 `;

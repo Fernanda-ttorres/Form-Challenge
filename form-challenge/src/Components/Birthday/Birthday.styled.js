@@ -49,7 +49,7 @@ export const BirthStyled = styled.div`
 
   @media (max-width: 375px) {
     select, input {
-        height: 2.3rem;
+        height: 2.2rem;
       }   
   }
 `;
