@@ -8,6 +8,7 @@ import Header from "../Header/Header";
 import Navbar from "../../Navbar/Navbar";
 import Basic from "../../Forms/Basic/Basic";
 import Social from "../../Forms/Social/Social";
+import Certificates from "../../Forms/Certificates/Certificates"
 
 export const AuthContext = React.createContext();
 
@@ -24,9 +25,9 @@ export const Page = () => {
       return <Basic unLock={setLock} />;
    } else if (page === 1) {
       return <Social unLock={setLock}/>;
-    } /*else if (page === 2) {
-      return <C />;
-    } else if (page === 3) {
+    } else if (page === 2) {
+      return <Certificates unLock={setLock}/>;
+    } /*else if (page === 3) {
       return <Sucess />
     }
     }*/

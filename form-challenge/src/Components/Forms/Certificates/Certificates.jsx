@@ -8,22 +8,20 @@ import Image from '../../../Assets/check.png';
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { AuthContext } from "../../Containers/Page/Page";
-//import schema from "../../../Utils/Validations";
+import {schemaThree} from "../../../Utils/Validations";
 
 const Certificates = ({unLock}) => {
     
     const { register, handleSubmit, watch, formState: { errors } } = useForm({
-    resolver: yupResolver(schema)
+    resolver: yupResolver(schemaThree)
     });
 
     const { name } = React.useContext(AuthContext); //page authcontext
     const [page,setPage] = name; //page state
 
-    let pageState;
     const onSubmit = data => {
-    pageState=1;
-    setPage(pageState)
-    unLock(1)
+    setPage(3)
+    unLock(0)
     console.log(data);
     }
     

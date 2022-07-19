@@ -7,21 +7,19 @@ import Image from '../../../Assets/right-arrow.png'
 
 import { yupResolver } from '@hookform/resolvers/yup';
 import { AuthContext } from "../../Containers/Page/Page";
-//import schema from "../../../Utils/Validations";
+import {schemaTwo} from "../../../Utils/Validations";
 
 const Social = ({unLock}) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm({
-        resolver: yupResolver(schema)
+        resolver: yupResolver(schemaTwo)
     });
     
     const { name } = React.useContext(AuthContext); //page authcontext
     const [page,setPage] = name; //page state
 
-    let pageState;
     const onSubmit = data => {
-    pageState=1;
-    setPage(pageState)
-    unLock(1)
+    setPage(2)
+    unLock(2)
     console.log(data);
     }
 
