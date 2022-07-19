@@ -1,9 +1,9 @@
 import {React, useState} from 'react'
 import { Label } from '../Micro/Label/Label';
 import { BirthStyled } from './Birthday.styled';
-import {Input} from '../Input/Input'
+import ErrorMessage from '../Micro/ErrorMessage/ErrorMessage';
 
-const Birthday = ({register}) => {
+const Birthday = ({register, errors, text}) => {
     const [Value, setValue] = useState("");
     const [Year, setYear] = useState("");
 
@@ -16,8 +16,11 @@ const Birthday = ({register}) => {
         arrayYear[j]=i
     }
 
+    console.log(Value)
+
     return (
         <BirthStyled>
+            <ErrorMessage errors={errors} id="selectmonth" text={text}/>
             <div>
                 <Label style="form" label="Day"/>
                 <select name="select-day" className="select-day" placeholder="01" id="select-day">
@@ -28,15 +31,15 @@ const Birthday = ({register}) => {
             </div>
             <div>
                 <Label style="form" label="Month" />
-                <select name="select-month" className="select-month" placeholder="01" id="select-month">
+                <select name="select-month" className="select-month" placeholder="01" id="selectmonth" {...register('selectmonth')}>
                     {arrayMonth.map((rdm, i) => (
-                    <option key={i} value={rdm}>{rdm}</option>
+                    <option key={i} value={rdm-1}>{rdm}</option>
                     ))}
                 </select>
             </div>
             <div>
             <Label style="form" label="Year"/>
-            <select name="select-year" className="select-year" onChange={(e) =>setYear(2022 - e.target.selectedIndex)} onBlur={()=>setValue(Number(2022-Year))} id="select-year">
+            <select name="select-year" className="select-year" onChange={(e) =>setYear(2022 - e.target.selectedIndex)} onBlur={()=>setValue(Number(2022-Year))} id="select-year" >
                 {arrayYear.map((rdm, i) => (
                 <option key={i} value={rdm}>{rdm}</option>
                 ))}
@@ -44,7 +47,7 @@ const Birthday = ({register}) => {
             </div>
             <div>
                 <Label style="form" label="Age"/>
-                <input value={Value} placeholder="18" disabled id="age" register={register}></input>
+                <input value={Value} placeholder="18" disabled id="age"  ></input>
             </div>
         </BirthStyled>
     )
