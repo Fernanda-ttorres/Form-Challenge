@@ -54,8 +54,8 @@ const { name } = React.useContext(AuthContext); //page authcontext
 
   return (
     <NavStyled>
-      <div className={"navbar-div"} >
-        <nav className="nav">
+      <div className={Nav} >
+        <nav className={"nav"}>
          <div className="tab" id={tabA} onClick={() => handleClick(0)}><p>Basic</p></div>
          <div className="tab"  id={tabB} onClick={() => handleClick(1)}><p>Social</p></div>
          <div className="tab"  id={tabC} onClick={() => handleClick(2)}><p>Certificates</p></div>

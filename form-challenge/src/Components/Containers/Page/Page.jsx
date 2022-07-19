@@ -13,7 +13,7 @@ import Certificates from "../../Forms/Certificates/Certificates"
 export const AuthContext = React.createContext();
 
 export const Page = () => {
-  let [page, setPage] = useState(0); //state that sets witch page we are
+  let [page, setPage] = useState(2); //state that sets witch page we are
   
   let [lock, setLock] = useState(0) //state that sets the lock on the navbar. only unlockd after submit   
 
