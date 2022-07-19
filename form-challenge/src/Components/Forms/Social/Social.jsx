@@ -25,8 +25,8 @@ const Social = ({unLock}) => {
 
     return (
         <SocialForm onSubmit={handleSubmit(onSubmit)}>
-            <Input id="linkedin" errors={errors} text="Please enter your Name" label="LindedIn" type="text" placeholder="https//www.linkedin.com/in/foo-bar-3a0560104/" register={register} />
-            <Input id="github" errors={errors} text="Please enter your Name" label="Github *" type="text" placeholder="http://github.com/foobar" register={register} unLock={unLock} />
+            <Input id="linkedin" errors={errors}  label="LindedIn" type="text" placeholder="https//www.linkedin.com/in/foo-bar-3a0560104/" register={register} />
+            <Input id="github" errors={errors} text="Please enter your GutHub Link" label="Github *" type="text" placeholder="http://github.com/foobar" register={register} unLock={unLock} />
             <DivBtn>
                 <Button nameDiv="next" id="next" type="submit"  text="Next"  imageTwo={Image}/>
             </DivBtn>

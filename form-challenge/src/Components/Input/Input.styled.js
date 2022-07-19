@@ -8,5 +8,7 @@ export const InputContainer = styled.div`
     width: 100%;
 `;
 
-
-
+export const DivMenErr =styled.div`
+    display: flex;
+    gap: 1rem
+`;

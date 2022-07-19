@@ -4,7 +4,7 @@ export const CheckBoxStyled = styled.div`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    width: 26rem;
+    width: 29rem;
     gap: 0.3rem;
 
     @media (max-width: 768px) {

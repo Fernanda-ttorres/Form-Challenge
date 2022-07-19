@@ -5,7 +5,7 @@ export const ErrorStyled = styled.p`
     font-size: 0.87rem;
     line-height: 14px;
     margin: 0;
-    max-width: 150px;
+    max-width: 200px;
 
     @media (max-width: 768px) {
         &.error{
